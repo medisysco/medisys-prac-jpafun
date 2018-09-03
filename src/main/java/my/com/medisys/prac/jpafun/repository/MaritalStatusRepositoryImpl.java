@@ -28,7 +28,7 @@ public class MaritalStatusRepositoryImpl implements MaritalStatusRepositoryCusto
     EntityManager em;
 
     /*@Override
-    public MaritalStatus findByMaritalStatusCode(String genderCode) {
+    public MaritalStatus findByMaritalStatusCode(String maritalStatusCode) {
         String jql = "SELECT ms FROM MaritalStatus ms WHERE ms.maritalStatusCode = :maritalStatusCode";
         Query qry = em.createQuery(jql);
         qry.setParameter("maritalStatusCode", maritalStatusCode);
