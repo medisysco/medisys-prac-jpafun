@@ -10,7 +10,7 @@ Gender.hbm.xml
 @version   0.0.00.GA
 @since     0.0.00.GA
 ================================================================================
---> <class name="my.com.medisys.prac.javaee.entity.Gender" table="genders" optimistic-lock="version">
+--> <class name="my.com.medisys.prac.jpafun.entity.Gender" table="genders" optimistic-lock="version">
         <id name="genderCode" type="string">
             <column name="gender_code" length="1"/>
             <generator class="assigned"/>

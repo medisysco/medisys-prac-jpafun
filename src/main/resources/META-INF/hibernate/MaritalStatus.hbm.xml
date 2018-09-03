@@ -10,7 +10,7 @@ MaritalStatus.hbm.xml
 @version   0.0.00.GA
 @since     0.0.00.GA
 ================================================================================
---> <class name="my.com.medisys.prac.javaee.entity.MaritalStatus" table="marital_status" optimistic-lock="version">
+--> <class name="my.com.medisys.prac.jpafun.entity.MaritalStatus" table="marital_status" optimistic-lock="version">
         <id name="maritalStatusCode" type="string">
             <column name="marital_status_code" length="1"/>
             <generator class="assigned"/>
@@ -20,7 +20,7 @@ MaritalStatus.hbm.xml
         </property>
     </class>
     <sql-query name="MaritalStatus.findByMaritalStatusCode">
-        <return alias="ms" class="my.com.medisys.prac.javaee.entity.MaritalStatus"/>
+        <return alias="ms" class="my.com.medisys.prac.jpafun.entity.MaritalStatus"/>
         <!-- <return-join alias="alias" property="ms.property"/> -->
         <![CDATA[
             SELECT ms.*

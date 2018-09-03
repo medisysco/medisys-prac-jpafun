@@ -1,4 +1,4 @@
-package my.com.medisys.config;
+package my.com.medisys.prac.jpafun.config;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,10 +11,11 @@ import org.springframework.context.annotation.Configuration;
  * @since     0.0.00.GA
  */
 @Configuration
-@ComponentScan(basePackages= {"my.com.medisys.prac.jpafun.config"})
-public class PRACConfig {
+@ComponentScan(basePackages = {"my.com.medisys.prac.jpafun.beans",
+        "my.com.medisys.prac.jpafun.service"})
+public class SpringBeansConfig {
 
     @SuppressWarnings("unused")
-    private static final Logger log = LoggerFactory.getLogger(PRACConfig.class);
+    private static final Logger log = LoggerFactory.getLogger(SpringBeansConfig.class);
 
 }
