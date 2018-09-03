@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout">
+<head>
+   <title>Medisys</title>
+</head>
+<body>
+   <div th:include="~{segment/content::body}" th:remove="tag"></div>
+   <div layout:fragment="viewport" th:remove="tag">
+      viewport
+   </div>
+</body>
+</html>

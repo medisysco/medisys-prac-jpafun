@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd"><!--
+================================================================================
+db.changelog-V0.0.00_20180803_110011.xml
+================================================================================
+@author    Medisys<devs@medisys.com.my>
+@vendor    Medical Systems Co. Ltd
+@web       medisys.com.my
+@version   0.0.00.GA
+@since     0.0.00.GA
+================================================================================
+--> <changeSet author="medisys" labels="m00,ddl,pkc" context="dev,qac,uat,pro" id="1533294011000-1" logicalFilePath="db.changelog-V0.0.00_20180803_110011.xml">
+        <addPrimaryKey columnNames="gender_code" constraintName="PRIMARY" tableName="genders"/>
+    </changeSet>
+    <changeSet author="medisys" labels="m00,ddl,pkc" context="dev,qac,uat,pro" id="1533294011000-2" logicalFilePath="db.changelog-V0.0.00_20180803_110011.xml">
+        <addPrimaryKey columnNames="marital_status_code" constraintName="PRIMARY" tableName="marital_status"/>
+    </changeSet>
+    <changeSet author="medisys" labels="m00,ddl,pkc" context="dev,qac,uat,pro" id="1533294011000-3" logicalFilePath="db.changelog-V0.0.00_20180803_110011.xml">
+        <addPrimaryKey columnNames="nationality_code" constraintName="PRIMARY" tableName="nationalities"/>
+    </changeSet>
+    <changeSet author="medisys" id="1533294011000-4" logicalFilePath="db.changelog-V0.0.00_20180803_110011.xml">
+        <tagDatabase tag="20180803"/>
+    </changeSet>
+</databaseChangeLog>

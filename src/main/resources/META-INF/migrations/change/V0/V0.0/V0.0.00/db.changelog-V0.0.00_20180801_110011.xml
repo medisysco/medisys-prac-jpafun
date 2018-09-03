@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd"><!--
+================================================================================
+db.changelog-V0.0.00_20180801_110011.xml
+================================================================================
+@author    Medisys<devs@medisys.com.my>
+@vendor    Medical Systems Co. Ltd
+@web       medisys.com.my
+@version   0.0.00.GA
+@since     0.0.00.GA
+================================================================================
+--> <changeSet author="medisys" labels="m00,ddl,tab" context="dev,qac,uat,pro" id="1533121211000-1" logicalFilePath="db.changelog-V0.0.00_20180801_110011.xml">
+        <createTable tableName="genders">
+            <column name="gender_code" type="VARCHAR(1)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="gender_name" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="medisys" labels="m00,ddl,tab" context="dev,qac,uat,pro" id="1533121211000-2" logicalFilePath="db.changelog-V0.0.00_20180801_110011.xml">
+        <createTable tableName="marital_status">
+            <column name="marital_status_code" type="VARCHAR(1)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="marital_status_name" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="medisys" labels="m00,ddl,tab" context="dev,qac,uat,pro" id="1533121211000-3" logicalFilePath="db.changelog-V0.0.00_20180801_110011.xml">
+        <createTable tableName="nationalities">
+            <column name="nationality_code" type="VARCHAR(3)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="nationality_name" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="medisys" labels="m00,ddl,tab" context="dev,qac,uat,pro" id="1533121211000-4" logicalFilePath="db.changelog-V0.0.00_20180801_110011.xml">
+        <createTable tableName="patients">
+            <column autoIncrement="true" name="patient_no" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="first_name" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="last_name" type="VARCHAR(50)"/>
+            <column name="fathers_name" type="VARCHAR(50)"/>
+            <column name="mothers_name" type="VARCHAR(50)"/>
+            <column name="birth_date" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="gender_code" type="VARCHAR(1)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="marital_status_code" type="VARCHAR(1)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="nationality_code" type="VARCHAR(3)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="phone_number" type="VARCHAR(15)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="medisys" id="1533121211000-5" logicalFilePath="db.changelog-V0.0.00_20180801_110011.xml">
+        <tagDatabase tag="20180801"/>
+    </changeSet>
+</databaseChangeLog>

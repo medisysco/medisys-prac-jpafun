@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd"><!--
+================================================================================
+db.changelog-master.xml
+================================================================================
+@author    Medisys<devs@medisys.com.my>
+@vendor    Medical Systems Co. Ltd
+@web       medisys.com.my
+@version   0.0.00.GA
+@since     0.0.00.GA
+================================================================================
+--> <includeAll path="config" relativeToChangelogFile="true"/>
+    <include file="change/db.changelog-V0.xml" relativeToChangelogFile="true"/><!--
+    <include file="change/db.changelog-V1.xml" relativeToChangelogFile="true"/>
+    <include file="change/db.changelog-V2.xml" relativeToChangelogFile="true"/>
+    <include file="change/db.changelog-V3.xml" relativeToChangelogFile="true"/>
+    <include file="change/db.changelog-V4.xml" relativeToChangelogFile="true"/>
+    <include file="change/db.changelog-V5.xml" relativeToChangelogFile="true"/>
+    <include file="change/db.changelog-V6.xml" relativeToChangelogFile="true"/>
+    <include file="change/db.changelog-V7.xml" relativeToChangelogFile="true"/>
+    <include file="change/db.changelog-V8.xml" relativeToChangelogFile="true"/>
+    <include file="change/db.changelog-V9.xml" relativeToChangelogFile="true"/>-->
+</databaseChangeLog>

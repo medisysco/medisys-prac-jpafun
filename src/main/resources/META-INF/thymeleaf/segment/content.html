@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+   <div th:fragment="body">
+   <h1>Medical Systems Co. Limited</h1>
+   <div class="content">
+      <div class="content-middle">
+         <p>This page is used to test the proper operation of the Apache Tomcat Embedded Servlet Container after it has been installed. If you can read this page, it means that the Apache Tomcat Embedded Servlet Container installed at this site is working properly.</p>
+       </div>
+       <hr />
+       <div class="content-columns">
+           <div class="content-column-left">
+               <h2>Marital Status:</h2>
+               <pre th:text="${maritalStatus}">
+               </pre>
+               <h2>Nationality:</h2>
+               <pre th:text="${nationality}">
+               </pre>
+               <p>For more information please visit the <a href="http://medisys.com.my"><strong>medisys.com.my</strong></a>. Please find the documentation in <a href="http://medisysco.github.io"><strong>medisysco.github.io</strong></a>.</p>
+               <hr />
+           </div>
+           <div class="content-column-right">
+               <h2>Gender:</h2>
+               <pre th:text="${gender}">
+               </pre>
+               <h2>Patient:</h2>
+               <pre th:text="${patient}">
+               </pre>
+               <p class="copyright"><strong>&copy; Copyright 2018 Medisys |Developed By Rufaida Medical Systems Sdn. Bhd.</strong></p>
+               <div align="right"><a href="http://medisys.com.my" target="_blank"><img th:src="@{/static/logos/medisys-logo.png}" alt="Powered by Medical Systems Co. Ltd" title="Powered by Medical Systems Co. Ltd" border="0"></a></div>
+           </div>
+       </div>
+   </div>
+   </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping><!--
+================================================================================
+Gender.hbm.xml
+================================================================================
+@author    Medisys<devs@medisys.com.my>
+@vendor    Medical Systems Co. Ltd
+@web       medisys.com.my
+@version   0.0.00.GA
+@since     0.0.00.GA
+================================================================================
+--> <class name="my.com.medisys.prac.javaee.entity.Gender" table="genders" optimistic-lock="version">
+        <id name="genderCode" type="string">
+            <column name="gender_code" length="1"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="genderName" type="string">
+            <column name="gender_name" length="50" not-null="true"/>
+        </property>
+    </class>
+    <query name="Gender.findByGenderCode">
+        <![CDATA[
+            SELECT g
+            FROM Gender g
+            WHERE g.genderCode = :genderCode
+        ]]>
+    </query>
+</hibernate-mapping>

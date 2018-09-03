@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+<!--
+================================================================================
+db.changelog-V0.0.00.xml
+================================================================================
+@author    Medisys<devs@medisys.com.my>
+@vendor    Medical Systems Co. Ltd
+@web       medisys.com.my
+@version   0.0.00.GA
+@since     0.0.00.GA
+================================================================================
+--> <include file="V0.0.00/db.changelog-V0.0.00_20180801_110011.xml" relativeToChangelogFile="true" context="dev,qac,uat,pro"/>
+    <include file="V0.0.00/db.changelog-V0.0.00_20180802_110011.xml" relativeToChangelogFile="true" context="dev,qac,uat,pro"/>
+    <include file="V0.0.00/db.changelog-V0.0.00_20180803_110011.xml" relativeToChangelogFile="true" context="dev,qac,uat,pro"/>
+</databaseChangeLog>

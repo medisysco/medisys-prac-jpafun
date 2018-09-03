@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd"><!--
+================================================================================
+db.changelog-V0.0.00_20180802_110011.xml
+================================================================================
+@author    Medisys<devs@medisys.com.my>
+@vendor    Medical Systems Co. Ltd
+@web       medisys.com.my
+@version   0.0.00.GA
+@since     0.0.00.GA
+================================================================================
+--> <changeSet author="medisys" labels="m00,dml,ini" context="dev,qac,uat,pro" id="1533207611000-1" logicalFilePath="db.changelog-V0.0.00_20180802_110011.xml">
+        <loadData commentLineStartsWith="#" encoding="UTF-8" file="20180802_110011/genders__dev_qac_uat_pro.csv" relativeToChangelogFile="true" quotchar="&quot;" separator="," tableName="genders">
+            <column header="gender_code" name="gender_code" type="STRING"/>
+            <column header="gender_name" name="gender_name" type="STRING"/>
+        </loadData>
+        <rollback>
+            <delete tableName="genders"/>
+        </rollback>
+    </changeSet>
+    <changeSet author="medisys" labels="m00,dml,ini" context="dev,qac,uat,pro" id="1533207611000-2" logicalFilePath="db.changelog-V0.0.00_20180802_110011.xml">
+        <loadData commentLineStartsWith="#" encoding="UTF-8" file="20180802_110011/marital_status__dev_qac_uat_pro.csv" relativeToChangelogFile="true" quotchar="&quot;" separator="," tableName="marital_status">
+            <column header="marital_status_code" name="marital_status_code" type="STRING"/>
+            <column header="marital_status_name" name="marital_status_name" type="STRING"/>
+        </loadData>
+        <rollback>
+            <delete tableName="marital_status"/>
+        </rollback>
+    </changeSet>
+    <changeSet author="medisys" labels="m00,dml,ini" context="dev,qac,uat,pro" id="1533207611000-3" logicalFilePath="db.changelog-V0.0.00_20180802_110011.xml">
+        <loadData commentLineStartsWith="#" encoding="UTF-8" file="20180802_110011/nationalities__dev_qac_uat_pro.csv" relativeToChangelogFile="true" quotchar="&quot;" separator="," tableName="nationalities">
+            <column header="nationality_code" name="nationality_code" type="STRING"/>
+            <column header="nationality_name" name="nationality_name" type="STRING"/>
+        </loadData>
+        <rollback>
+            <delete tableName="nationalities"/>
+        </rollback>
+    </changeSet>
+    <changeSet author="medisys" labels="m00,dml,trx" context="dev,qac" id="1533207611000-4" logicalFilePath="db.changelog-V0.0.00_20180802_110011.xml">
+        <loadData commentLineStartsWith="#" encoding="UTF-8" file="20180802_110011/patients__dev_qac.csv" relativeToChangelogFile="true" quotchar="&quot;" separator="," tableName="patients">
+            <column header="patient_no" name="patient_no" type="NUMERIC"/>
+            <column header="first_name" name="first_name" type="STRING"/>
+            <column header="last_name" name="last_name" type="STRING"/>
+            <column header="fathers_name" name="fathers_name" type="STRING"/>
+            <column header="mothers_name" name="mothers_name" type="STRING"/>
+            <column header="birth_date" name="birth_date" type="DATE"/>
+            <column header="gender_code" name="gender_code" type="STRING"/>
+            <column header="marital_status_code" name="marital_status_code" type="STRING"/>
+            <column header="nationality_code" name="nationality_code" type="STRING"/>
+            <column header="phone_number" name="phone_number" type="STRING"/>
+        </loadData>
+        <rollback>
+            <delete tableName="patients"/>
+        </rollback>
+    </changeSet>
+    <changeSet author="medisys" id="1533207611000-5" logicalFilePath="db.changelog-V0.0.00_20180802_110011.xml">
+        <tagDatabase tag="20180802"/>
+    </changeSet>
+</databaseChangeLog>
