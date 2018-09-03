@@ -39,9 +39,9 @@ public class GenderController {
     }
 
     @GetMapping("/{genderCode}")
-    public Map<String, Object> getGenderByCode(@PathVariable(value = "genderCode") String genderCode) {
+    public Map<String, Object> findByGenderCode(@PathVariable(value = "genderCode") String genderCode) {
         Map<String, Object> res = new HashMap<String, Object>();
-        Gender gender = service.getByGenderCode(genderCode);
+        Gender gender = service.findByGenderCode(genderCode);
         String message = ObjectUtils.isEmpty(gender) ? "No Record Found" : "One Record Found";
         res.put("message", message);
         res.put("success", true);

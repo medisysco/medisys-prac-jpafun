@@ -25,7 +25,7 @@ public class GenderServiceImpl implements GenderService{
     }
 
     @Override
-    public Gender getByGenderCode(String genderCode){
+    public Gender findByGenderCode(String genderCode){
         return repo.findByGenderCode(genderCode);
     }
 

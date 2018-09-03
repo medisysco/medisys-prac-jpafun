@@ -11,5 +11,5 @@ import my.com.medisys.prac.jpafun.entity.Gender;
  */
 public interface GenderService {
     List<Gender> findAll();
-    Gender getByGenderCode(String genderCode);
+    Gender findByGenderCode(String genderCode);
 }
