@@ -18,7 +18,7 @@ import my.com.medisys.prac.jpafun.entity.Nationality;
 import my.com.medisys.prac.jpafun.service.NationalityService;
 
 @RestController
-@RequestMapping(value = "/nationality")
+@RequestMapping("/nationality")
 public class NationalityController {
 
     @SuppressWarnings("unused")
@@ -39,7 +39,7 @@ public class NationalityController {
     }
 
     @GetMapping("/{nationalityCode}")
-    public Map<String, Object> findByMaritalStatusCode(@PathVariable(value = "nationalityCode") String nationalityCode) {
+    public Map<String, Object> findByMaritalStatusCode(@PathVariable("nationalityCode") String nationalityCode) {
         Map<String, Object> res = new HashMap<String, Object>();
         Nationality nationality = service.findByNationalityCode(nationalityCode);
         String message = ObjectUtils.isEmpty(nationality) ? "No Record Found" : "One Record Found";

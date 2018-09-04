@@ -42,11 +42,12 @@ public class PatientController {
     }
 
     @GetMapping("/{patientNo}")
-    public Map<String, Object> findByPatientNo(@PathVariable(value = "patientNo") int patientNo) {
+    public Map<String, Object> findByPatientNo(@PathVariable("patientNo") int patientNo) {
         Map<String, Object> res = new HashMap<String, Object>();
         Patient patient = service.findByPatientNo(patientNo);
+        if(!ObjectUtils.isEmpty(patient))
+            log.info("Patient Birth Date : {}", patient.getBirthDate());
         String message = ObjectUtils.isEmpty(patient) ? "No Record Found" : "One Record Found";
-        log.info("Patient Birth Date : {}", patient.getBirthDate());
         res.put("message", message);
         res.put("data", patient);
         res.put("success", true);
@@ -65,7 +66,7 @@ public class PatientController {
     }
 
     @PutMapping("/{patientNo}")
-    public Map<String, Object> update(@PathVariable(value = "patientNo") int patientNo, @RequestBody Patient patient) {
+    public Map<String, Object> update(@PathVariable("patientNo") int patientNo, @RequestBody Patient patient) {
         Map<String, Object> res = new HashMap<String, Object>();
         Patient update = service.update(patientNo, patient);
         String message = ObjectUtils.isEmpty(update) ? "Record Not Updated" : "One Record Updated";
@@ -76,7 +77,7 @@ public class PatientController {
     }
 
     @DeleteMapping("/{patientNo}")
-    public Map<String, Object> delete(@PathVariable(value = "patientNo") int patientNo) {
+    public Map<String, Object> delete(@PathVariable("patientNo") int patientNo, @RequestBody Patient patient) {
         Map<String, Object> res = new HashMap<String, Object>();
         Patient delete = service.delete(patientNo);
         String message = ObjectUtils.isEmpty(delete) ? "Record Unable to Delete" : "One Record Deleted";

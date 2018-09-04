@@ -2,6 +2,8 @@ package my.com.medisys.prac.jpafun.service;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +17,9 @@ import my.com.medisys.prac.jpafun.repository.GenderRepository;
  */
 @Service
 public class GenderServiceImpl implements GenderService{
+
+    @SuppressWarnings("unused")
+    private static final Logger log = LoggerFactory.getLogger(GenderServiceImpl.class);
 
     @Autowired
     GenderRepository repo;
