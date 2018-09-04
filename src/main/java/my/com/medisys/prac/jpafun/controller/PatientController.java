@@ -55,9 +55,9 @@ public class PatientController {
     }
 
     @PostMapping
-    public Map<String, Object> save(@RequestBody Patient Patient) {
+    public Map<String, Object> save(@RequestBody Patient patient) {
         Map<String, Object> res = new HashMap<String, Object>();
-        Patient patient = service.save(Patient);
+        patient = service.save(patient);
         String message = ObjectUtils.isEmpty(patient) ? "Record Not Saved" : "One Record Saved";
         res.put("message", message);
         res.put("data", patient);
@@ -68,22 +68,22 @@ public class PatientController {
     @PutMapping("/{patientNo}")
     public Map<String, Object> update(@PathVariable("patientNo") int patientNo, @RequestBody Patient patient) {
         Map<String, Object> res = new HashMap<String, Object>();
-        Patient update = service.update(patientNo, patient);
-        String message = ObjectUtils.isEmpty(update) ? "Record Not Updated" : "One Record Updated";
+        patient = service.update(patientNo, patient);
+        String message = ObjectUtils.isEmpty(patient) ? "Record Not Updated" : "One Record Updated";
         res.put("message", message);
         res.put("success", true);
-        res.put("data", update);
+        res.put("data", patient);
         return res;
     }
 
     @DeleteMapping("/{patientNo}")
     public Map<String, Object> delete(@PathVariable("patientNo") int patientNo, @RequestBody Patient patient) {
         Map<String, Object> res = new HashMap<String, Object>();
-        Patient delete = service.delete(patientNo);
-        String message = ObjectUtils.isEmpty(delete) ? "Record Unable to Delete" : "One Record Deleted";
+        patient = service.delete(patientNo);
+        String message = ObjectUtils.isEmpty(patient) ? "Record Unable to Delete" : "One Record Deleted";
         res.put("message", message);
         res.put("success", true);
-        res.put("data", delete);
+        res.put("data", patient);
         return res;
     }
 
