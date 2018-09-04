@@ -44,10 +44,10 @@ public class DefaultController {
 
     private String getBashCommand(String name, String id) {
         String bash = "\n";
-        bash += String.format("bash <(curl -s   '%s/%s'\n", BASE_URL, name);
-        bash += String.format("bash <(wget -qO- '%s/%s'\n\n", BASE_URL, name);
-        bash += String.format("bash <(curl -s   '%s/%s/%s'\n", BASE_URL, name, id);
-        bash += String.format("bash <(wget -qO- '%s/%s/%s'\n", BASE_URL, name, id);
+        bash += String.format("curl -s   '%s/%s'\n", BASE_URL, name);
+        bash += String.format("wget -qO- '%s/%s'\n\n", BASE_URL, name);
+        bash += String.format("curl -s   '%s/%s/%s'\n", BASE_URL, name, id);
+        bash += String.format("wget -qO- '%s/%s/%s'\n", BASE_URL, name, id);
         return bash;
     }
 
