@@ -23,7 +23,7 @@ public class BootstrapApplication {
 
     @PostConstruct
     public void init(){
-        TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
+//      TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
         log.info("TimeZone: {}", TimeZone.getDefault());
     }
 
