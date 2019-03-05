@@ -1,5 +1,6 @@
 package my.com.medisys.prac.jpafun.controller;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -20,6 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import my.com.medisys.prac.jpafun.entity.Patient;
 import my.com.medisys.prac.jpafun.service.PatientService;
+import my.com.medisys.prac.utlity.DateUtil;
 
 @RestController
 @RequestMapping("/patient")
@@ -32,9 +34,11 @@ public class PatientController {
 
     @GetMapping
     public Map<String, Object> findAll(Patient patient) {
-        Map<String, Object> res = new HashMap<String, Object>();
         List<Patient> patients = service.findAll(patient);
+        Map<String, Object> res = new HashMap<String, Object>();
+        log.info("Date: {}", DateUtil.format(new Date(), DateUtil.SENCHA_DATE));
         String message = CollectionUtils.isEmpty(patients) ? "No Record Found" : "Records Found";
+
         res.put("message", message);
         res.put("data", patients);
         res.put("success", true);
